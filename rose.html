@@ -109,15 +109,15 @@ background:rgba(20,4,20,.86);backdrop-filter:blur(8px);animation:fade .5s both}
   <div class="bq" id="bq"></div>
   <div class="hint2">🌹 Chạm vào đóa hồng thêm một lần nữa nhé!</div>
   <canvas id="fx" aria-hidden="true"></canvas>
-  <div class="intro"><h1>Anh có một món quà nhỏ dành riêng cho em...</h1><p>🌹 Chạm vào đóa hồng để khám phá nhé, tình yêu của anh!</p></div>
+  <div class="intro"><h1>Anh có một món quà nhỏ dành riêng cho em...</h1><p>🌹 Em chạm vào đóa hồng đi!</p></div>
   <section class="letter" id="box" aria-live="polite">
-    <h2>🌷 Chúc mừng ngày 20/10, cô gái anh yêu! 🌹</h2>
+    <h2>🌷 Chúc mừng ngày 20/10, bé iu của anh 🌹</h2>
     <div id="txt"></div>
-    <div class="fin" id="fin"><p class="last">Em là đóa hoa đẹp nhất trong khu vườn của anh ❤️</p><button class="btn" id="hugbtn">Ôm anh một cái nhé? 💗</button></div>
+    <div class="fin" id="fin"><p class="last">Em là đóa hoa đẹp nhất trong khu vườn của anh ❤️</p><button class="btn" id="hugbtn">Yêu em💗</button></div>
   </section>
 </main>
 <button class="music" id="mb" aria-label="Bật hoặc tắt nhạc" aria-pressed="false">🔇</button>
-<div class="hug" id="hug" hidden><div class="bigheart">❤️</div><h3>Gửi em một cái ôm thật chặt từ anh! 🫂</h3><button class="btn" id="hugx">Đóng</button></div>
+<div class="hug" id="hug" hidden><div class="bigheart">❤️</div><h3>Gửi em một cái ôm của anh nè! 🫂</h3><button class="btn" id="hugx">Đóng</button></div>
 
 <script>
 const $=s=>document.querySelector(s),sleep=ms=>new Promise(r=>setTimeout(r,ms));
@@ -201,13 +201,13 @@ function play(){try{ac=ac||new(window.AudioContext||window.webkitAudioContext)()
 function stop(){clearInterval(tm);mb.textContent='🔇';mb.setAttribute('aria-pressed','false')}
 mb.onclick=()=>mb.getAttribute('aria-pressed')==='true'?stop():play();
 // Letter
-const P=[["Gửi em, cô gái đặc biệt nhất trong trái tim anh ❤️"],
+const P=[["Gửi bé, em luôn đặc biệt nhất trong tim của anh ❤️"],
 ["Nhân ngày 20/10, anh muốn dành tặng em cả một vườn hoa hồng, bởi vì với anh, em xứng đáng nhận được những điều xinh đẹp và dịu dàng nhất trên thế giới này."],
 ["Cảm ơn em vì đã xuất hiện trong cuộc đời anh, vì những nụ cười, những khoảnh khắc đáng yêu và vì đã khiến những ngày bình thường của anh trở nên đặc biệt hơn."],
-["Anh mong em luôn vui vẻ, luôn xinh đẹp, luôn tự tin theo cách riêng của mình. Mong rằng những lúc em mệt mỏi sẽ luôn có một người sẵn sàng lắng nghe, những lúc em buồn sẽ có một vòng tay để em tựa vào, và những lúc em hạnh phúc, anh sẽ là người được nhìn thấy nụ cười ấy đầu tiên."],
+["Anh mong em luôn vui vẻ, luôn xinh đẹp, luôn tự tin vào chính mình. Mong rằng những lúc em mệt mỏi sẽ luôn có một người sẵn sàng lắng nghe, những lúc em buồn sẽ có một vòng tay để em tựa vào, và những lúc em hạnh phúc, anh sẽ là người được nhìn thấy nụ cười ấy đầu tiên."],
 ["Nếu có thể, anh muốn mỗi ngày đều dành cho em một bông hồng, một lời yêu thương và một lý do để em mỉm cười."],
 ["Chúc cô gái của anh có một ngày 20/10 thật hạnh phúc. Anh không hứa sẽ khiến mọi thứ trong cuộc sống đều hoàn hảo, nhưng anh sẽ cố gắng yêu thương em bằng sự chân thành, quan tâm em bằng những điều nhỏ bé và cùng em tạo nên thật nhiều kỷ niệm đẹp."],
-["Anh yêu em, hôm nay, ngày mai và cả những ngày bình thường sau này nữa. ❤️",1],
+["Anh yêu em nhất trên đời lun!!",1],
 ["Happy Vietnamese Women’s Day 20/10! 🌹"]];
 const box=$('#box'),txt=$('#txt');let skip=false;box.addEventListener('click',()=>skip=true);
 async function write(){for(const [t,b] of P){const p=document.createElement('p'),el=b?p.appendChild(document.createElement('b')):p;txt.appendChild(p);p.classList.add('typing');
